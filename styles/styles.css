@@ -16,16 +16,104 @@
 
 
 body {
+margin: 0;
+min-height: 100%;
+ display: flex;
+ flex-direction: column;
 font-family: "PT Sans", sans-serif;
 font-style: normal;
 font-size: 18px;
 Line-height: 21px
 font-weight: 400;
 color: #333333;
-/*background-color: #FFFFFF;*/
- background-color: #AEF4F4;            /*удалить заливку*/
+background-color: #F2F2F2;
 
 }
+
+ html {
+   height: 100%;
+ }
+
+
+/* блоки */
+
+  .page-container {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #ffffff;
+
+}
+
+.main-index {
+flex-grow: 1;
+
+}
+
+/* навигация шапка */
+
+
+ .navigation-list-left,
+ .navigation-list-user,
+ .footer-social-list {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+
+ }
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+ .logo-top {
+   width: 139px;
+   height: 70px;
+   margin-left: 0;
+ }
+
+.page-header {
+display: flex;
+flex-direction: column
+ height: 65px;
+  width: 1060px;
+  margin: 0 auto;
+background-color: #ffffff;
+outline: 1px solid #333333;
+}
+
+
+.navigation {
+
+width: 890px;
+margin: 0;
+padding: 0;
+min-height: 65px;
+}
+
+
+
+
+                                                         /*  не получается разнести по сторонам*/
+.navigation-list-left {
+max-width: 350px;
+margin-left: 30px;
+float: left;
+
+}
+
+.navigation-list-user {
+max-width: 270px;
+margin-right: 10px;
+margin-top: 0;
+float: right;
+}
+
+
+
+
+
 
 
                                                      /*header текст*/
@@ -67,18 +155,138 @@ text-transform: uppercase;
 }
 
 
+                     /* шапка лого */
+.top-page-logo {
+  /* display: flex;
+ justify-content: center; */
+ text-align: center;
+  padding-top: 50px;
+padding-bottom: 82px;
+}
+
+
+
+
                       /*ОСновное*/
 .main-index {
   color: #000000;
-  /* background-color: #FFFFFF; */
+   background-color: #FFFFFF;
   background-image: url("/images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: #AEF4F4;
-  /*удалить заливку*/
 
 }
 
+
+.advantages-header {
+margin-top: 65px;
+margin-bottom: 85px;
+}
+
+
+
+
+
+
+                    /* блок преимуществ */
+
+/* 1 и 3 строки*/
+
+.first-type-row {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 2;
+  flex-wrap: wrap;
+
+}
+
+
+.first-type-row .advantages-row-item {
+background-color: #83B3D3;
+
+}
+
+
+
+
+
+/* СТРОКА 2-4 */
+
+
+.row-icon,
+.row-item{
+display: flex;
+flex-direction: row;
+flex-grow: 3;
+
+
+}
+
+.advantages-row-item {
+width: 400px;
+height: 384px;
+outline: 1px solid  #333333;
+
+}
+
+
+
+
+/* БЛОК ПОДПИСАТЬСЯ И ПОСИК ГОСТИНИЦ */
+
+
+
+.search-hotel {
+min-height: 384px;
+width: auto;
+}
+
+.newsletter,
+.newsletter-inner {
+min-height: 384px;
+width: auto;
+}
+
+
+
+/* ФУТЕР  - не получается сделать и подвал отлип от main*/
+
+
+
+.page-footer {
+  display: flex;
+  width: 1200px;
+  height: 120px;
+  justify-content: space-between;
+}
+
+.phone,
+.logo-htmlacademy {
+  display: block;
+}
+
+.phone {
+  width: 720px;
+  height: 40px;
+}
+
+.logo-htmlacademy {
+width: 115px;
+height: 34px;
+
+}
+
+.footer-social-list {
+  width: 107px;
+  height: 18px;
+}
+
+
+
+
+
+
+/* ОФОРМЛЕНИЕ ТЕКСТА */
 
 /* h3 */
 .advantages-header-title {
@@ -190,8 +398,9 @@ color: #333333;
   font-weight: 700;
   color: #FFFFFF;
   text-align: center;
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
+
 
 
                                 /* Рассылка текст*/
@@ -287,7 +496,53 @@ color: #000000;
 
 
 
-/*------------------------------------------------------каталог----------------------------------*/
+/*------------------------------------------------------КАТАЛОГ----все плохо-----------------------------------------------------------------------*/
+
+
+.main-catalog {
+flex-grow: 1;
+background-image: url("/images/catalog-background-top.jpg");
+width: 1200px;
+height: 408px;
+background-repeat: no-repeat;
+
+}
+
+.catalog-sort {
+height: 48px;
+
+}
+
+
+
+.catalog-list {
+display: flex;
+width: 1058px;
+height: 1040px;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-between;
+margin-left: 70px;
+margin-right: 74px;
+
+}
+
+.product-card {
+  width: 339px;
+  height: 438px;
+  margin: 10px;
+
+}
+
+
+.newsletter-title-inner,
+
+}
+
+
+
+
+/* -----ТЕКСТ------------- */
 
 .breadcrumbs-link {
 font-family: "PT Sans", sans-serif;
