@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("/fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,34 +10,36 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("/fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
+}
+
+html {
+  min-height: 100vh;
 }
 
 
 body {
 margin: 0;
-min-height: 100%;
- display: flex;
- flex-direction: column;
+min-height: 100vh;
 font-family: "PT Sans", sans-serif;
 font-style: normal;
 font-size: 18px;
-Line-height: 21px
+Line-height: 21px;
 font-weight: 400;
 color: #333333;
 background-color: #F2F2F2;
 
 }
 
- html {
-   height: 100%;
- }
-
 
 /* блоки */
 
   .page-container {
+    margin: 0;
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
   width: 1200px;
   background-color: #ffffff;
@@ -75,8 +77,9 @@ li {
 
 .page-header {
 display: flex;
-flex-direction: column
- height: 65px;
+flex-direction: row;
+justify-content: space-between;
+ min-height: 65px;
   width: 1060px;
   margin: 0 auto;
 background-color: #ffffff;
@@ -157,8 +160,7 @@ text-transform: uppercase;
 
                      /* шапка лого */
 .top-page-logo {
-  /* display: flex;
- justify-content: center; */
+
  text-align: center;
   padding-top: 50px;
 padding-bottom: 82px;
@@ -194,9 +196,7 @@ margin-bottom: 85px;
 
 .first-type-row {
   display: flex;
-  flex-direction: row;
-  flex-grow: 2;
-  flex-wrap: wrap;
+
 
 }
 
@@ -224,7 +224,7 @@ flex-grow: 3;
 
 .advantages-row-item {
 width: 400px;
-height: 384px;
+min-height: 384px;
 outline: 1px solid  #333333;
 
 }
@@ -252,33 +252,39 @@ width: auto;
 /* ФУТЕР  - не получается сделать и подвал отлип от main*/
 
 
-
+/*
 .page-footer {
-  display: flex;
   width: 1200px;
-  height: 120px;
-  justify-content: space-between;
+  min-height: 120px;
+
+} */
+
+.contacts {
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
+
+
 
 .phone,
 .logo-htmlacademy {
-  display: block;
+
 }
 
 .phone {
-  width: 720px;
-  height: 40px;
+
 }
 
 .logo-htmlacademy {
-width: 115px;
-height: 34px;
+
 
 }
 
 .footer-social-list {
   width: 107px;
-  height: 18px;
+  min-height: 18px;
+  background-color: aqua;
 }
 
 
@@ -496,48 +502,83 @@ color: #000000;
 
 
 
-/*------------------------------------------------------КАТАЛОГ----все плохо-----------------------------------------------------------------------*/
+/*------------------------------------------------------КАТАЛОГ---------------------------------------------------------------------------*/
 
 
 .main-catalog {
-flex-grow: 1;
-background-image: url("/images/catalog-background-top.jpg");
-width: 1200px;
-height: 408px;
-background-repeat: no-repeat;
 
+background-image: url("/images/catalog-background-top.jpg");
+background-repeat: no-repeat;
+margin: 0 auto;
+min-height: 100vh;
 }
+
 
 .catalog-sort {
-height: 48px;
+
 
 }
 
+ul.catalog-list  {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 
-.catalog-list {
+ul.catalog-list {
 display: flex;
-width: 1058px;
-height: 1040px;
-flex-direction: row;
 flex-wrap: wrap;
-justify-content: space-between;
-margin-left: 70px;
-margin-right: 74px;
+justify-content: space-around;
+width: 100%;
+
 
 }
 
 .product-card {
   width: 339px;
-  height: 438px;
-  margin: 10px;
+  min-height: 438px;
+
+outline: 1px solid #333333;
+
+}
+
+ol.pagination-list {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+background-color: antiquewhite;
 
 }
 
 
-.newsletter-title-inner,
+
+.pagination-catalog {
 
 }
+
+.count-item-onpage {
+
+
+}
+
+
+.button-pagination-show-more {
+background-color: #83B3D3;
+
+}
+
+
+
+
+
+.newsletter-inner {
+
+background-color: rgb(227, 216, 238);
+
+}
+
+
 
 
 
