@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("fonts/ptsans-400.woff2") format("woff2");
+  src: url("/fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,22 +10,113 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("fonts/ptsans-700.woff2") format("woff2");
+  src: url("/fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
+}
+
+html {
+  min-height: 100vh;
 }
 
 
 body {
+margin: 0;
+min-height: 100vh;
 font-family: "PT Sans", sans-serif;
 font-style: normal;
 font-size: 18px;
-Line-height: 21px
+Line-height: 21px;
 font-weight: 400;
 color: #333333;
-/*background-color: #FFFFFF;*/
- background-color: #AEF4F4;            /*удалить заливку*/
+background-color: #F2F2F2;
 
 }
+
+
+/* блоки */
+
+  .page-container {
+    margin: 0;
+    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 1200px;
+  background-color: #ffffff;
+
+}
+
+.main-index {
+flex-grow: 1;
+
+}
+
+/* навигация шапка */
+
+
+ .navigation-list-left,
+ .navigation-list-user,
+ .footer-social-list {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+
+ }
+
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+}
+ .logo-top {
+   width: 139px;
+   height: 70px;
+   margin-left: 0;
+ }
+
+.page-header {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+ min-height: 65px;
+  width: 1060px;
+  margin: 0 auto;
+background-color: #ffffff;
+outline: 1px solid #333333;
+}
+
+
+.navigation {
+
+width: 890px;
+margin: 0;
+padding: 0;
+min-height: 65px;
+}
+
+
+
+
+                                                         /*  не получается разнести по сторонам*/
+.navigation-list-left {
+max-width: 350px;
+margin-left: 30px;
+float: left;
+
+}
+
+.navigation-list-user {
+max-width: 270px;
+margin-right: 10px;
+margin-top: 0;
+float: right;
+}
+
+
+
+
+
 
 
                                                      /*header текст*/
@@ -67,18 +158,141 @@ text-transform: uppercase;
 }
 
 
+                     /* шапка лого */
+.top-page-logo {
+
+ text-align: center;
+  padding-top: 50px;
+padding-bottom: 82px;
+}
+
+
+
+
                       /*ОСновное*/
 .main-index {
   color: #000000;
-  /* background-color: #FFFFFF; */
+   background-color: #FFFFFF;
   background-image: url("/images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-color: #AEF4F4;
-  /*удалить заливку*/
 
 }
 
+
+.advantages-header {
+margin-top: 65px;
+margin-bottom: 85px;
+}
+
+
+
+
+
+
+                    /* блок преимуществ */
+
+/* 1 и 3 строки*/
+
+.first-type-row {
+  display: flex;
+
+
+}
+
+
+.first-type-row .advantages-row-item {
+background-color: #83B3D3;
+
+}
+
+
+
+
+
+/* СТРОКА 2-4 */
+
+
+.row-icon,
+.row-item{
+display: flex;
+flex-direction: row;
+flex-grow: 3;
+
+
+}
+
+.advantages-row-item {
+width: 400px;
+min-height: 384px;
+outline: 1px solid  #333333;
+
+}
+
+
+
+
+/* БЛОК ПОДПИСАТЬСЯ И ПОСИК ГОСТИНИЦ */
+
+
+
+.search-hotel {
+min-height: 384px;
+width: auto;
+}
+
+.newsletter,
+.newsletter-inner {
+min-height: 384px;
+width: auto;
+}
+
+
+
+/* ФУТЕР  - не получается сделать и подвал отлип от main*/
+
+
+/*
+.page-footer {
+  width: 1200px;
+  min-height: 120px;
+
+} */
+
+.contacts {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+
+.phone,
+.logo-htmlacademy {
+
+}
+
+.phone {
+
+}
+
+.logo-htmlacademy {
+
+
+}
+
+.footer-social-list {
+  width: 107px;
+  min-height: 18px;
+  background-color: aqua;
+}
+
+
+
+
+
+
+/* ОФОРМЛЕНИЕ ТЕКСТА */
 
 /* h3 */
 .advantages-header-title {
@@ -190,8 +404,9 @@ color: #333333;
   font-weight: 700;
   color: #FFFFFF;
   text-align: center;
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
+
 
 
                                 /* Рассылка текст*/
@@ -287,7 +502,88 @@ color: #000000;
 
 
 
-/*------------------------------------------------------каталог----------------------------------*/
+/*------------------------------------------------------КАТАЛОГ---------------------------------------------------------------------------*/
+
+
+.main-catalog {
+
+background-image: url("/images/catalog-background-top.jpg");
+background-repeat: no-repeat;
+margin: 0 auto;
+min-height: 100vh;
+}
+
+
+.catalog-sort {
+
+
+}
+
+ul.catalog-list  {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+ul.catalog-list {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+width: 100%;
+
+
+}
+
+.product-card {
+  width: 339px;
+  min-height: 438px;
+
+outline: 1px solid #333333;
+
+}
+
+ol.pagination-list {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+background-color: antiquewhite;
+
+}
+
+
+
+.pagination-catalog {
+
+}
+
+.count-item-onpage {
+
+
+}
+
+
+.button-pagination-show-more {
+background-color: #83B3D3;
+
+}
+
+
+
+
+
+.newsletter-inner {
+
+background-color: rgb(227, 216, 238);
+
+}
+
+
+
+
+
+
+/* -----ТЕКСТ------------- */
 
 .breadcrumbs-link {
 font-family: "PT Sans", sans-serif;

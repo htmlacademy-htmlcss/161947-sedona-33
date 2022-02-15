@@ -8,11 +8,11 @@
 </head>
 
 <body>
-
+<div class="page-container">
   <header class="page-header">
-    <a href="index.html"><img src="images/logo.svg" width="139" height="70" alt="Логотип городка"></a>
+    <a class="logo-top" href="index.html"><img src="images/logo.svg" width="139" height="70" alt="Логотип городка"></a>
     <nav class="navigation">
-      <ul class="navigation-list">
+      <ul class="navigation-list-left">
         <li class="navigation-item">
           <a class="navigation-link" href="index.html">Главная</a>
         </li>
@@ -23,12 +23,14 @@
           <a class="navigation-link">Гостиницы</a>
         </li>
       </ul>
-      <ul class="navigation-list navigation-user">
-        <li class="navigation-item">
+
 
 
 
           <!--------------МЕНЮ СПРАВА---------------->
+
+      <ul class="navigation-list-user">
+        <li class="navigation-item">
 
           <button class="navigation-link" type="button"><span class="visually-hidden">Поиск</span></button>
 
@@ -218,7 +220,8 @@
       Загрузить ещё
     </button>
 
-    <ol class="pagination">
+  <div class="pagination-catalog">
+    <ol class="pagination-list">
 
       <li class="pagination-item">
         <a href="#" class="pagination-link pagination-current">1</a>
@@ -251,9 +254,10 @@
       <select class="count-item-show" aria-label="Количество карточек на странице">
         <option value="4">4</option>
         <option value="6">6</option>
-
       </select>
+  </div>
     </div>
+
   </main>
   <!------------- ПОДПИСАТЬСЯ НА РАССЫЛКУ--->
 
@@ -314,7 +318,7 @@
     </a>
   </div>
   </footer>
-
+</div>
 </body>
 
 </html>
