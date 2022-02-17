@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -211,7 +211,7 @@ background: #756257;
 .main-index {
   color: #000000;
   background-color: #FFFFFF;
-  background-image: url("/images/index-background.jpg");
+  background-image: url("images/index-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
 
@@ -499,7 +499,7 @@ color: #FFFFFF;
 
 
 .newsletter-index {
-background-image: url("/images/news-letter-background.jpg");
+background-image: url("images/news-letter-background.jpg");
 
 }
 
@@ -519,7 +519,7 @@ background-image: url("/images/news-letter-background.jpg");
 
 .main-catalog {
 
-background-image: url("/images/catalog-background-top.jpg");
+background-image: url("images/catalog-background-top.jpg");
 background-repeat: no-repeat;
 margin: 0 auto;
 min-height: 100vh;
@@ -696,7 +696,8 @@ ul.catalog-list  {
 ul.catalog-list {
 display: flex;
 flex-wrap: wrap;
-justify-content: space-around;
+justify-content: flex-start;
+gap: 10px;
 width: 100%;
 margin-bottom: 60px;
 
@@ -705,7 +706,7 @@ margin-bottom: 60px;
 .product-card {
   width: 300px;
   min-height: 438px;
-margin-bottom:10px;
+
 padding: 20px;
 outline: 1px solid #333333;
 
