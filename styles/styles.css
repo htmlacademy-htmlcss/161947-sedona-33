@@ -2,7 +2,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/ptsans-400.woff2") format("woff2");
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -10,7 +10,7 @@
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/ptsans-700.woff2") format("woff2");
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -44,121 +44,180 @@ background-color: #F2F2F2;
   width: 1200px;
   background-color: #ffffff;
 
+
 }
 
-.main-index {
+.main-container {
 flex-grow: 1;
 
 }
 
-/* навигация шапка */
 
 
- .navigation-list-left,
- .navigation-list-user,
- .footer-social-list {
- list-style-type: none;
- margin: 0;
- padding: 0;
 
+/*---------------------------- НАВИГАЦИЯ ШАПКА ------------------------------*/
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
+ .logo-top {
+   display: block;
+   min-width: 139px;
+   min-height: 70px;
+   margin-left: 0;
  }
 
-li {
+
+
+.page-header {
+display: flex;
+min-height: 65px;
+width: 1060px;
+margin: 0 auto;
+background-color: #ecd3ee;
+outline: 1px solid #333333;
+
+}
+
+/* ------------НАВИГАЦИЯ МЕНЮ СЛЕВА---------------- */
+.navigation-list-left,
+.navigation-list-user {
   list-style-type: none;
   margin: 0;
   padding: 0;
 
 }
- .logo-top {
-   width: 139px;
-   height: 70px;
-   margin-left: 0;
- }
 
-.page-header {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
- min-height: 65px;
-  width: 1060px;
-  margin: 0 auto;
-background-color: #ffffff;
-outline: 1px solid #333333;
-}
 
 
 .navigation {
-
+display: flex;
 width: 890px;
-margin: 0;
+margin-top: 0;
 padding: 0;
 min-height: 65px;
-}
-
-
-
-
-                                                         /*  не получается разнести по сторонам*/
-.navigation-list-left {
-max-width: 350px;
 margin-left: 30px;
-float: left;
-
-}
-
-.navigation-list-user {
-max-width: 270px;
-margin-right: 10px;
-margin-top: 0;
-float: right;
 }
 
 
+.navigation-list-left {
+/* max-width: 350px; */
+ max-width: 400px;  /* ЗАПАСНАЯ ШИРИНА ДЛЯ ПЕРЕПОЛНЕНИЯ*/
+display: flex;
+flex-wrap: wrap;
+margin: 0;
+align-items: center;
 
+}
 
+.navigation-list-left .navigation-item{
+flex-grow: 1;
 
+}
 
+.navigation-list-left .navigation-link {
+   display: block;
+padding: 20px 17px;
 
-                                                     /*header текст*/
-
-
-.visually-hidden {
-  display: none;
 }
 
 
 .navigation-link {
- font-family: "PT Sans", sans-serif;
- font-style: normal;
- line-height: 26px;
- font-weight: 700;
- color: #000000;
-background-color: #FFFFFF;
-text-decoration: none;
+  display: block;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #FFFFFF;
+  text-decoration: none;
+  outline: 1px solid #333333;
 }
 
+/* ------------НАВИГАЦИЯ МЕНЮ СПРАВА--------------- */
 
-.navigation-item .text-button,
-.search-hotel button {
-  background: #756257;
+
+
+.navigation-list-user {
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+max-width: 450px;
+margin-left: auto;
+
+
+}
+
+/*
+.navigation-item button {
+background-color: #e604f7;
+
+} */
+
+
+.navigation-list-user .navigation-link,
+.navigation-list-user .navigation-favorite,
+.navigation-list-user span {
+display: block;
+margin: 0;
+padding: 0;
+min-width: 40px;
+min-height: 60px;
+text-decoration: none;
+background-color: rgb(187, 243, 149);
+
+}
+
+.navigation-item .text-button {
+display: block;
+min-width: 160px;
+min-height: 37px;
+background: #756257;
+
 }
 
 .text-button,
 .button-filter {
-font-family: "PT Sans", sans-serif;
-font-style: normal;
-font-size: 16px;
-line-height: 20px;
-font-weight: 700;
-color: #FFFFFF;
-text-align: center;
-text-decoration: none;
-text-transform: uppercase;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
 
 }
 
 
-                     /* шапка лого */
+
+
+
+
+                     /*------ЛОГО-------------*/
+
+
+.main-index {
+  color: #000000;
+  background-color: #FFFFFF;
+  background-image: url("../images/index-background.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+}
+
+
 .top-page-logo {
 
  text-align: center;
@@ -169,25 +228,13 @@ padding-bottom: 82px;
 
 
 
-                      /*ОСновное*/
-.main-index {
-  color: #000000;
-   background-color: #FFFFFF;
-  background-image: url("/images/index-background.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
 
-}
 
 
 .advantages-header {
 margin-top: 65px;
 margin-bottom: 85px;
 }
-
-
-
-
 
 
                     /* блок преимуществ */
@@ -205,9 +252,6 @@ margin-bottom: 85px;
 background-color: #83B3D3;
 
 }
-
-
-
 
 
 /* СТРОКА 2-4 */
@@ -232,66 +276,6 @@ outline: 1px solid  #333333;
 
 
 
-/* БЛОК ПОДПИСАТЬСЯ И ПОСИК ГОСТИНИЦ */
-
-
-
-.search-hotel {
-min-height: 384px;
-width: auto;
-}
-
-.newsletter,
-.newsletter-inner {
-min-height: 384px;
-width: auto;
-}
-
-
-
-/* ФУТЕР  - не получается сделать и подвал отлип от main*/
-
-
-/*
-.page-footer {
-  width: 1200px;
-  min-height: 120px;
-
-} */
-
-.contacts {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-
-
-
-.phone,
-.logo-htmlacademy {
-
-}
-
-.phone {
-
-}
-
-.logo-htmlacademy {
-
-
-}
-
-.footer-social-list {
-  width: 107px;
-  min-height: 18px;
-  background-color: aqua;
-}
-
-
-
-
-
-
 /* ОФОРМЛЕНИЕ ТЕКСТА */
 
 /* h3 */
@@ -304,6 +288,7 @@ font-weight: 700;
 color: #000000;
 text-align: center;
 text-transform: uppercase;
+margin: 0;
 }
 
 /* подзаголовок */
@@ -371,7 +356,7 @@ color: #ffffff;
 
 
 
-                                /*Поиск гостиницы*/
+                               /*----------------- БЛОК ПОДПИСАТЬСЯ И ПОИCК ГОСТИНИЦ --------------*/
 
 
 .search-hotel h2 {
@@ -383,6 +368,8 @@ color: #ffffff;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 
@@ -394,27 +381,61 @@ font-size: 22px;
 line-height: 26px;
 text-align: center;
 color: #333333;
+margin: 0;
+margin-bottom: 56px;
 }
 
 .popup-search-hotel {
+  display: block;
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-size: 20px;
   line-height: 36px;
   font-weight: 700;
   color: #FFFFFF;
+  background: #756257;
   text-align: center;
-    text-transform: uppercase;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  width: 575px;
+
+}
+
+
+.search-hotel {
+ padding: 94px 0px;          /* на макете нет четких значений,  от 93 до 95 - что выбирать?*/
+
+
+}
+
+                             /* -------------Рассылка текст-----------------*/
+
+.newsletter h2,
+.newsletter p {
+margin: 0;
+
+}
+
+.newsletter-index {
+padding: 94px 0px;
+
+}
+
+.newsletter-inner {
+padding: 94px 0 140px;
+
+}
+
+
+.newsletter p {
+padding: 46px 0;
+
 }
 
 
 
-                                /* Рассылка текст*/
-
-
-
-
-.newsletter-index {
+.newsletter-index h2 {
 font-family: "PT Sans", sans-serif;
 font-style: normal;
 font-weight: 700;
@@ -436,10 +457,24 @@ color: #FFFFFF;
 
 }
 
+.newsletter-form {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+
+}
+
+
+
 /* Рассылка с внутренней страницы, переопределение цвета текста */
 
 
-.newsletter-title-inner {
+.newsletter-inner h2 {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -463,40 +498,17 @@ color: #FFFFFF;
 }
 
 
-
-
-.newsletter-button {
-font-family: "PT Sans", sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 26px;
-text-align: center;
-text-transform: uppercase;
-color: #FFFFFF;
-}
-
 .newsletter-index {
-background-image: url("/images/news-letter-background.jpg");
+background-image: url("../images/news-letter-background.jpg");
 
 }
 
 
+.newsletter-inner {
+  background-color: rgb(227, 216, 238);
 
-
-
-/* Футер*/
-
-.phone {
-font-family: "PT Sans", sans-serif;
-font-size: 40px;
-line-height: 40px;
-font-style: normal;
-font-weight: normal;
-text-decoration: none;
-text-transform: uppercase;
-color: #000000;
 }
+
 
 
 
@@ -507,17 +519,172 @@ color: #000000;
 
 .main-catalog {
 
-background-image: url("/images/catalog-background-top.jpg");
+background-image: url("../images/catalog-background-top.jpg");
 background-repeat: no-repeat;
 margin: 0 auto;
 min-height: 100vh;
+padding-top: 30px;
+padding-left: 70px;
+padding-right: 70px;
 }
+
+.catalog-header,
+.catalog-filter-header {
+  margin: 0;
+}
+
+
+
+
+
+.catalog-title {
+font-family: "PT Sans", sans-serif;
+font-style: normal;
+font-weight: 700;
+font-size: 60px;
+line-height: 78px;
+color: #FFFFFF;
+margin: 0;
+margin-bottom: 5px;
+}
+
+
+
+/*----------breadcrumbs НЕ ПОЛУЧАЕТСЯ РАЗМЕТИТЬ------  */
+
+.breadcrumbs {
+list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+margin-bottom: 55px;
+outline: 1px solid #333333;
+align-items: center;
+
+width: 110px;
+height: 20px;
+}
+
+
+li.breadcrumbs-item:first-child {
+width: 15px;
+height: 15px;
+outline: 1px solid #333333;
+}
+
+
+
+li.breadcrumbs-item:last-child {
+  margin-right: 0;
+}
+
+
+.breadcrumbs-item {
+margin-right: 10px;
+}
+
+/* ПОД ИКОНКУ  СТРЕЛКИ МЕСТО - В РАЗМЕТКУ КОНТЕЙНЕР ИЛИ В CSS? */
+
+
+
+.breadcrumbs-link {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+text-decoration: none;
+}
+
+
+
+
+/*----------------------- Фильтры------------------------------------------------*/
+
+.catalog-filter-environment-title,
+.catalog-filter-type-title {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+
+
+.button-filter {
+
+  background-color: #c585e2;
+}
+
+
+
+
+/*------------------------------- СТРОКА СОРТИРОВКИ----------------------------*/
 
 
 .catalog-sort {
-
+margin: 40px 0 50px;
+display: flex;
+justify-content: space-between;
+min-height: 48px;
+outline: 1px solid #333333;
 
 }
+
+.catalog-sort h2 {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 39px;
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0 190px 0 0;
+
+}
+
+.select-sort {
+width: 287px;
+font-family: "PT Sans", sans-serif;
+font-style: normal;
+font-size: 18px;
+line-height: 23px;
+color: #333333;
+padding-left: 19px;
+}
+
+                            /* СТРЕЛКА НЕ РЕАГИРУЕТ НА ПАДДИНГ */
+
+
+.catalog-sort-right {
+  margin-left: auto;
+}
+
+
+
+
+.catalog-sort button {
+width: 48px;
+height: 48px;
+margin-right: 8px;
+background-color: #c585e2;
+border: none;
+
+}
+
+.catalog-sort button:last-child {
+margin-right: 0;
+
+}
+
+
+
+
+
+
+/*-------------------- КАРТОЧКИ ТОВАРОВ -------------------------------------------*/
 
 ul.catalog-list  {
   list-style: none;
@@ -529,102 +696,30 @@ ul.catalog-list  {
 ul.catalog-list {
 display: flex;
 flex-wrap: wrap;
-justify-content: space-around;
+justify-content: flex-start;
+gap: 10px;
 width: 100%;
-
+margin-bottom: 60px;
 
 }
 
 .product-card {
-  width: 339px;
+  width: 300px;
   min-height: 438px;
 
+padding: 20px;
 outline: 1px solid #333333;
 
 }
 
-ol.pagination-list {
- list-style: none;
- padding: 0;
- margin: 0;
-background-color: antiquewhite;
+.product-card:nth-child(3) {
+margin-right: 0;
 
 }
 
 
 
-.pagination-catalog {
-
-}
-
-.count-item-onpage {
-
-
-}
-
-
-.button-pagination-show-more {
-background-color: #83B3D3;
-
-}
-
-
-
-
-
-.newsletter-inner {
-
-background-color: rgb(227, 216, 238);
-
-}
-
-
-
-
-
-
-/* -----ТЕКСТ------------- */
-
-.breadcrumbs-link {
-font-family: "PT Sans", sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 21px;
-color: #FFFFFF;
-
-}
-
-/* Фильтры */
-
-.catalog-filter-environment-title,
-.catalog-filter-type-title {
-font-family: "PT Sans", sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 20px;
-line-height: 26px;
-color: #FFFFFF;
-}
-
-/* как стилизовать фильтры пока не нашла */
-
-
-
-
-/* СТРОКА СОРТИРОВКИ */
-
-.catalog-sort h2 {
-font-family: "PT Sans", sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 30px;
-line-height: 39px;
-color: #000000;
-text-transform: uppercase;
-}
-
-/* Карточки товаров */
+/*---------------------------- Карточки товаров ТЕКСТ ---------------------*/
 
 .product-card-title {
 font-family: "PT Sans", sans-serif;
@@ -672,26 +767,209 @@ text-decoration: none;
   color: #333333;
 }
 
-/* Пагинация */
+
 
 .button-pagination-show-more {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: block;
+  min-width: 620px;
+  margin: 0px auto;
+  background-color: #c585e2;
+  margin-bottom: 60px;
+  /*временный маргин */
+
+}
+
+
+
+
+
+/* --------------------------Пагинация------------------------------------------- */
+
+
+.pagination-catalog {
+display: flex;
+justify-content: space-between;
+margin: 0;
+
+}
+
+
+.pagination-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.pagination-list {
+display: flex;
+
+}
+
+.pagination-item:not(:last-child) {
+  margin-right: 7px;
+}
+
+.pagination-item {
+
+
+}
+
+
+
+                                        /* ------------------ПОЧЕМУ РАБОТАЕМ С ССЫЛКАМИ, А НЕ ОБОЛОЧКАМИ ССЫЛОК?*/
+.pagination-link {
+display: block;
+box-sizing: border-box;
+text-decoration: none;
+width: 55px;
+height: 55px;
+padding: 14px 0;
 font-family: "PT Sans", sans-serif;
 font-style: normal;
 font-weight: 700;
 font-size: 20px;
 line-height: 26px;
-text-align: center;
-text-transform: uppercase;
 color: #FFFFFF;
+text-transform: uppercase;
+background-color: #83B3D3;
+text-align: center;
 
 }
 
+.pagination-current {
+background-color: #F2F2F2;
+color: #000000;
+
+}
+
+
+
+/*----------------СТРОКА -ВЫВОД  ЧИСЛА ГОСТИНИЦ------------------------------*/
+
+
+.count-item-onpage {
+width: 386px;
+outline: 1px solid #333333;
+display: flex;
+align-items: center;
+}
+
+
 .count-item-onpage-title {
+  display: block;
 font-family: "PT Sans", sans-serif;
 font-style: normal;
 font-weight: normal;
 font-size: 18px;
 line-height: 23px;
 color: #333333;
+padding: 16px 0;
 }
+
+.count-item-show {
+width: 160px;
+height: 48px;
+margin-left: auto;
+
+}
+
+                                /* -------------------------------------ФУТЕР ---------------------------------------------------------*/
+
+
+/*
+.page-footer {
+  width: 1200px;
+  min-height: 120px;
+
+} */
+
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+
+.footer-social-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+ display: flex;
+ flex-wrap: wrap;
+ max-width: 300px;
+justify-content: space-between;
+
+}
+
+li.footer-social-item {
+  display: block;
+  width: 25px;
+  min-height: 25px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+background-color: rgb(189, 104, 238);
+outline: 1px solid #333333;
+}
+
+
+li.footer-social-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+
+.logo-htmlacademy {
+display: block;
+max-width: 300px;
+}
+
+
+/*
+.footer-social-list {
+  width: 107px;
+  min-height: 18px;
+  background-color: aqua;
+
+}
+
+.contacts-phone {
+  max-width: 400px;
+
+}
+
+*/
+
+
+.phone {
+  font-family: "PT Sans", sans-serif;
+  font-size: 40px;
+  line-height: 40px;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+
+}
+
+
+
+
+
+
+.phone,
+.logo-htmlacademy {}
+
+.phone {}
+
+.logo-htmlacademy {}
 
