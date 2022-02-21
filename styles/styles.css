@@ -692,7 +692,7 @@ ul.catalog-list  {
   margin: 0;
 }
 
-
+/* ФЛЕКС
 ul.catalog-list {
 display: flex;
 flex-wrap: wrap;
@@ -715,48 +715,125 @@ outline: 1px solid #333333;
 .product-card:nth-child(3) {
 margin-right: 0;
 
+} */
+
+
+/* ПЕРЕДЕЛАЛА НА ГРИДАХ КАТАЛОГ */
+
+
+ul.catalog-list {
+display: grid;
+grid-template-columns: repeat(3, 340px);
+margin-bottom: 60px;
+gap: 10px;
+
+}
+
+/* -----------------РАЗМЕТКА СЕТКИ КАРТОЧКИ -------------------*/
+
+.product-card {
+  width: 300px;
+  min-height: 398px;
+  padding: 20px;
+  outline: 1px solid #333333;
+ display: flex;
+ flex-direction: column;
+
 }
 
 
-
-/*---------------------------- Карточки товаров ТЕКСТ ---------------------*/
-
 .product-card-title {
-font-family: "PT Sans", sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 31px;
-color: #000000;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  color: #000000;
+  margin: 16px 0;
+}
+
+
+.product-card-category-wrapper {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+/* gap: 16px; */
+
+}
+
+
+.product-card-category {
+display: block;
+
+}
+
+
+.product-card-onpage,
+.product-card-chosen {
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  min-width: 133px;
+  border: none;
+  padding: 10px 0;
+  min-width: 133px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+
+
+}
+
+
+.product-card-onpage {
+background-color: #756257;
+
+}
+
+.product-card-chosen {
+  background-color: #83B3D3;
+
 }
 
 
 .product-card-category,
 .product-card-price {
-font-family: "PT Sans", sans-serif;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 23px;
-color: #333333;
-}
-
-a.product-card-onpage,
-.product-card-chosen {
-font-family: "PT Sans", sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 21px;
-color: #FFFFFF;
-text-align: center;
-text-transform: uppercase;
-text-decoration: none;
+  font-family: "PT Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
+  color: #333333;
+  min-width: 133px;
+  margin: 0 0 16px;
+  display: block;
 
 }
 
 
-.product-card .rate {
+.product-card-rate {
+min-width: 100%;
+margin-bottom: 0px;
+}
+
+
+ .rate-stars {
+  display: block;
+  min-width: 95px;
+  min-height: 37px;
+   float: left;
+  margin-right: 36px;
+  background-color: #f1c675;
+}
+
+
+
+.rate {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -765,7 +842,20 @@ text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   color: #333333;
+  min-width: 160px;
+display: block;
+  padding: 10px 0;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+float: right;
+
+
 }
+
+
+
+
+
 
 
 
@@ -783,6 +873,7 @@ text-decoration: none;
   margin: 0px auto;
   background-color: #c585e2;
   margin-bottom: 60px;
+  padding: 17px 0;
   /*временный маргин */
 
 }
