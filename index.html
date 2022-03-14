@@ -51,7 +51,7 @@
             </svg>
             <span class="visually-hidden">Избранное</span>
             <!-- <span class="icon-favorite-disk"></span> -->
-             <span class="navigation-link-number">12</span>
+             <span class="icon-favorite-number">12</span>
 
             </button>
         </li>
@@ -200,7 +200,7 @@
     <form class="newsletter-form" action="https://echo.htmlacademy.ru/courses" method="post">
       <label for="newsletter-email">
         <input class="newsletter-field" placeholder="Ваш e-mail" type="email" name="newsletter-email"
-          id="newsletter-email">
+          id="newsletter-email" requited>
       </label>
       <button class="button newsletter-button" type="submit">
         Подписаться
@@ -295,6 +295,95 @@
   </footer>
   </div>
 
+<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
+
+
+ <div class="modal-container modal-container-close">
+   <div class="modal modal-search-field">
+    <button class="modal-close-button" type="button">
+      <span class="visually-hidden">Закрыть</span>
+      <svg class="icon-close-button" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 1.2 11.8 0 6.5 5.3 1.2 0 0 1.2l5.3 5.3L0 11.8 1.2 13l5.3-5.3 5.3 5.3 1.2-1.2-5.3-5.3L13 1.2Z"/>
+      </svg>
+    </button>
+    <section class="modal-content">
+      <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+
+
+      <form class="form-search" action="https://echo.htmlacademy.ru/" method="post">
+
+
+
+     <p class="field-group">
+
+     <label class="" for="arrival-date">Дата заезда:</label>
+     <input class="input-form-search" type="text" name="search-date" id="arrival-date" value="27 апреля 2020">
+
+      <span class="field-group-tips field-tips-invalid">Мы не можем отправить вас в прошлое.</span>
+
+     </p>
+
+
+    <p class="field-group">
+
+     <label for="departure-date">Дата выезда:</label>
+     <input class="input-form-search" type="text" name="search-date" id="departure-date" value="1 сентября 2021">
+
+     <span class="field-group-tips">На эти даты есть свободные номера. Пока есть.</span>
+
+     </p>
+
+
+
+
+
+     <!-- )))))))))))))))))))))))))))))))))))))))))------------------------------------------------- -->
+     <div class="wrapper-field-count">
+    <p class="field-group group-adults-count">
+     <label for="adults-count">Взрослые:</label>
+     <button class="reduce-count"><span class="visually-hidden">Уменьшить количество взрослых</span></button>
+     <input class="input-form-search input-form-count" type="text" name="search-date" id="adults-count" value="2">
+
+     </p>
+
+
+    <p class="field-group group-child-count">
+
+      <span class="form-label-tooltip">
+        <label class="label-tooltip" for="child-count">Дети:</label>
+      </span>
+
+        <span class="form-tooltip">
+
+          <button class="form-tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+           <svg class="form-tooltip-icon" width="25" height="25" viewBox="0 0 25 25" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+             <circle cx="12.5" cy="12.5" r="12.5" fill="currentColor"/><g clip-path="url(#a)" fill="#fff">
+               <path d="M12 17h1v-6h-1v6ZM13 8h-1v1h1V8Z"/></g><defs><clipPath id="a">
+                 <path transform="translate(12 8)" d="M0 0h1v9H0z"/>
+          </clipPath></defs></svg>
+          </button>
+
+
+
+          <span class="form-tooltip-text" role="tooltip" id="tooltip-label">
+            Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+          </span>
+
+        </span>
+
+
+     <input class="input-form-search input-form-count" type="text" name="search-date" id="child-count" value="1">
+     </p>
+    </div>
+     <button class="button-form-search">Найти</button>
+
+      </form>
+    </section>
+   </div>
+
+ </div>
 </body>
 
 </html>

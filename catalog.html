@@ -47,8 +47,7 @@
               <path d="M9.58 17.41a.9.9 0 0 1-.8-.4c-5.4-6.1-6.7-7.5-7-7.9a5.4 5.4 0 0 1 4.4-8.7c1.3 0 2.5.5 3.5 1.3a5.46 5.46 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/>
             </svg>
             <span class="visually-hidden">Избранное</span>
-            <!-- <span class="icon-favorite-disk"></span> -->
-             <span class="navigation-link-number">12</span>
+            <span class="icon-favorite-number">12</span>
 
             </button>
         </li>
@@ -82,46 +81,129 @@
 
     <!---------------------------------ФИЛЬТР ВЫБОР ОПЦИЙ-------------------->
 
-    <section class="catalog-filter-header">
+    <section class="catalog-filter-wrapper">
+
       <h2 class="visually-hidden">Фильтр выбора отеля</h2>
       <form class="catalog-filter" action="https://echo.htmlacademy.ru/courses" method="post">
 
         <fieldset class="catalog-filter-environment">
-          <legend class="catalog-filter-environment-title">Инфраструктура:</legend>
-          <label class="check">
-            <input class="check-input" type="checkbox" name="environment" value="swimmingpool" checked>Бассейн
-          </label>
 
-          <label class="check">
-            <input class="check-input" type="checkbox" name="environment" value="parking" checked>Парковка
-          </label>
+          <legend class="catalog-filter-title">Инфраструктура:</legend>
+         <ul class="catalog-filter-list">
 
-          <label class="check">
-            <input class="check-input" type="checkbox" name="environment" value="Wi-Fi">Wi-Fi
+         <li class="catalog-filter-item">
+          <label class="control">
+            <input class="visually-hidden control-input" name="environment" value="swimmingpool" checked>
+          <span class="control-mark">
+          </span>
+          <span class="control-label">
+        Бассейн
+          </span>
           </label>
+         </li>
+
+         <li class="catalog-filter-item">
+          <label class="control">
+            <input class="visually-hidden control-input" type="checkbox" name="environment" value="parking" checked>
+            <span class="control-mark">
+          </span>
+          <span class="control-label">
+              Парковка
+          </span>
+
+          </label>
+        </li>
+
+        <li class="catalog-filter-item">
+          <label class="control">
+            <input class="visually-hidden control-input" type="checkbox" name="environment" value="Wi-Fi">
+            <span class="control-mark">
+          </span>
+          <span class="control-label">
+              Wi-Fi
+          </span>
+          </label>
+          </li>
+
+         </ul>
         </fieldset>
 
 
         <!-------------------------------ФИЛЬТР РАДИО ТИП ЖИЛЬЯ---------------->
 
         <fieldset class="catalog-filter-type">
-          <legend class="catalog-filter-type-title">Тип жилья:</legend>
-          <label class="type">
-            <input class="type-input" type="radio" name="type-house" value="hotel" checked>Гостиница
+          <legend class="catalog-filter-title">Тип жилья:</legend>
+          <ul class="catalog-filter-list">
+
+            <li class="catalog-filter-item">
+          <label class="control">
+            <input class="visually-hidden control-input" type="radio" name="type-house" value="hotel" checked>
+            <span class="control-mark"></span>
+            <span class="control-label">Гостиница</span>
           </label>
-          <label class="type">
-            <input class="type-input" type="radio" name="type-house" value="motel">Мотель
+          </li>
+
+          <li class="catalog-filter-item">
+          <label class="control">
+            <input class="visually-hidden control-inputt" type="radio" name="type-house" value="motel">
+            <span class="control-mark"></span>
+            <span class="control-label">Мотель</span>
           </label>
-          <label class="type">
-            <input class="type-input" type="radio" name="type-house" value="apartments">Апартаменты
+          </li>
+
+          <li class="catalog-filter-item">
+          <label class="control">
+            <input class="visually-hidden control-input" type="radio" name="type-house" value="apartments">
+            <span class="control-mark"></span>
+            <span class="control-label">Апартаменты</span>
           </label>
+          </li>
+          </ul>
         </fieldset>
-        <!---Блок выбор стоимости будет размечен после 8 лайва-->
+
+
+      <fieldset class="catalog-filter-range">
+       <legend class="catalog-filter-title">Стоимость, ₽:</legend>
+
+       <div class="range">
+      <div class="range-wrapper-inputs">
+        <label class="catalog-filter-label">
+
+        <input class="range-input range-input-left" type="number" value="0" name="min-price" placeholder="от">
+
+        </label>
+
+        <label class="catalog-filter-label">
+
+        <input class="range-input range-input-right" type="number" value="9000" name="max-price" placeholder="до">
+
+        </label>
+            </div>
+
+
+
+    <div class="range-scale">
+
+      <div class="range-bar" style="left: 0px; width: 227px;">
+        <button type="button" class="range-toggle toggle-min">
+
+        </button>
+
+        <button type="button" class="range-toggle toggle-max">
+        </button>
+      </div>
+
+      </div>
+    </div>
+      </fieldset>
+
+      <div class="button-filter-wrap">
         <button class="button-filter" type="submit">Применить</button>
         <button class="button-filter-reset" type="reset">Сбросить
         </button>
+      </div>
       </form>
-    </Section>
+    </section>
 
 
 
@@ -134,14 +216,13 @@
       <h2 catalog-sort-title>Найдено гостиниц:<span class="output-results">38
         </span></h2>
 
-      <select class="select-sort" aria-label="Сортировка">
+      <div class="sorting-container">
+      <div class="select sorting-type">
+      <select class="select-control" aria-label="Сортировка">
         <option value="cheap">Сначала дешёвые</option>
         <option value="expensive">Сначала дорогие</option>
       </select>
-
-
-
-
+      </div>
 
       <div class="catalog-sort-toggle">
 
@@ -181,7 +262,7 @@
       </button>
       </div>
     </div>
-
+  </div>
     <!-------------------------------КАРТОЧКИ ТОВАРОВ-------------------------------------------->
 
     <ul class="catalog-list">
@@ -298,6 +379,7 @@
       Загрузить ещё
     </button>
 
+
   <div class="pagination-catalog">
     <ol class="pagination-list">
 
@@ -328,11 +410,13 @@
     </ol>
 
     <div class="count-item-onpage">
-      <span class="count-item-onpage-title">Гостиниц на странице:</span>
-      <select class="count-item-show" aria-label="Количество карточек на странице">
+      <span class="count-item-title">Гостиниц на странице:</span>
+      <div class="select-count-wrapper">
+      <select class="select-count-control" aria-label="Количество карточек на странице">
         <option value="4">4</option>
         <option value="6">6</option>
       </select>
+      </div>
   </div>
     </div>
 
