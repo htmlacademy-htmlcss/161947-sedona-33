@@ -201,7 +201,7 @@
     <form class="newsletter-form" action="https://echo.htmlacademy.ru/courses" method="post">
       <label for="newsletter-email">
         <input class="newsletter-field" placeholder="Ваш e-mail" type="email" name="newsletter-email"
-          id="newsletter-email" requited>
+          id="newsletter-email" required>
       </label>
       <button class="button newsletter-button" type="submit">
         Подписаться
@@ -317,24 +317,24 @@
 
 
 
-     <p class="field-group">
+     <div class="field-group field-group-top">
 
      <label class="" for="arrival-date">Дата заезда:</label>
      <input class="input-form-search" type="text" name="search-date" id="arrival-date" value="27 апреля 2020">
 
       <span class="field-group-tips field-tips-invalid">Мы не можем отправить вас в прошлое.</span>
 
-     </p>
+     </div>
 
 
-    <p class="field-group">
+    <div class="field-group field-group-top">
 
      <label for="departure-date">Дата выезда:</label>
      <input class="input-form-search" type="text" name="search-date" id="departure-date" value="1 сентября 2021">
 
      <span class="field-group-tips">На эти даты есть свободные номера. Пока есть.</span>
 
-     </p>
+    </div>
 
 
 
@@ -342,15 +342,29 @@
 
      <!-- )))))))))))))))))))))))))))))))))))))))))------------------------------------------------- -->
      <div class="wrapper-field-count">
-    <p class="field-group group-adults-count">
+
+    <div class="field-group group-adults-count">
+
      <label for="adults-count">Взрослые:</label>
-     <button class="reduce-count"><span class="visually-hidden">Уменьшить количество взрослых</span></button>
+
+    <div class="wrapper-input-count">
+
+     <button class="reduce-count button-count-popup" type="button">
+    <svg class="icon-minus-button" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0v1h13V0H0Z"/>
+    </svg>
+      </button>
      <input class="input-form-search input-form-count" type="text" name="search-date" id="adults-count" value="2">
+     <button class="add-count button-count-popup" type="button"></button>
+     <svg class="icon-plus-button" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+       <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/></svg>
+    </div>
 
-     </p>
+  </div>
 
+<!-- <span class="visually-hidden">Уменьшить количество взрослых</span> -->
 
-    <p class="field-group group-child-count">
+    <div class="field-group group-child-count">
 
       <span class="form-label-tooltip">
         <label class="label-tooltip" for="child-count">Дети:</label>
@@ -374,10 +388,32 @@
 
         </span>
 
+<!-- ------------------------------------- -->
 
+    <div class="wrapper-input-count">
+           <button class="reduce-count button-count-popup" type="button">
+             <svg class="icon-minus-button" width="13" height="1" viewBox="0 0 13 1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0v1h13V0H0Z"/>
+    </svg>
+           </button>
      <input class="input-form-search input-form-count" type="text" name="search-date" id="child-count" value="1">
-     </p>
+      <button class="add-count button-count-popup" type="button">
+        <svg class="icon-plus-button" width="13" height="13" viewBox="0 0 13 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+       <path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/></svg>
+      </button>
+     </div>
     </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
      <button class="button-form-search">Найти</button>
 
       </form>
